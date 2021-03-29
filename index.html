@@ -41,10 +41,16 @@
               <a href="#"><i class="search_for_input fas fa-search"></i></a>
               <input class="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
             </div>
-              <div class="address_1">
-                <img class="img_address" src="img/avatar_1.jpg" alt="">
-                <p class="address_name">Michele</p>
-              </div>
+
+              <ul>
+                <li v-for="(element,index) in contacts">
+                  <div class="address_1">
+                    <img class="img_address" src="'img/avatar' + contacts.avatar + '.jpg'" alt="photo">
+                    <p class="address_name">{{contacts.name}}pippo</p>
+                  </div>
+                </li>
+              </ul>
+
               <!-- <div class="address_2">
                 <img class="img_address" src="img/avatar_2.jpg" alt="">
                 <p class="address_name">Fabio</p>
