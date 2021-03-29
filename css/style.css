@@ -17,6 +17,9 @@ margin-top: 20px;
 position: relative;
 display: flex;
 }
+.container_left_container{
+  width: 100%;
+}
 .left_container{
 width: 35%;
 background-color: #fff;
@@ -30,7 +33,6 @@ border: 1px solid lightgray;
 .header_right{
   background-color: #EAEAEA;
   position: absolute;
-  z-index: 1;
   padding: 5px;
   border: 1px solid lightgray;
   height: 70px;
@@ -108,6 +110,56 @@ margin-top: 2px;
   align-items: center;
   border-radius: 50%;
 }
+.bell{
+  color:  #8EDAFC;
+  font-size: 18px;
+}
+.search_bar{
+  background-color: #F3EEEA;
+  display: flex;
+  padding: 10px 0;
+  position: relative;
+}
+.search_contact{
+  width: 95%;
+  margin: auto;
+  outline: none;
+  border: #B1B1B1;
+  height: 30px;
+  padding-left: 45px;
+}
+i.search_for_input{
+  position: absolute;
+  z-index: 2;
+  left: 8%;
+  top:35%;
+  font-size: 12px;
+  color:#B1B1B1;
+}
+.address_1,
+.address_2,
+.address_3{
+  height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 20px;
+}
+.address_2{
+  border-bottom: 1px solid lightgray;
+}
+.address_1{
+ background-color: #EAEAEA;
+}
+.img_address{
+  width: 12%;
+  display: flex;
+  border-radius: 50%;
+}
+.address_name{
+  margin: 5px 0 0 10px;
+  align-self: flex-start;
+}
 .right_container{
   width: 65%;
   position: absolute;
@@ -117,17 +169,14 @@ margin-top: 2px;
   display: flex;
   border: 1px solid lightgray;
 }
-.bell{
-  color:  #8EDAFC;
-  font-size: 18px;
-}
+
 .column_left{
   display: flex;
   /* background-color: pink; */
   width: 50%;
   padding: 0 70px;
   justify-content: flex-start;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 .column_right{
   display: flex;
@@ -135,5 +184,5 @@ margin-top: 2px;
   width: 50%;
   padding: 0 70px;
   justify-content: flex-end;
-  margin-top: 70px;
+  margin-top: 80px;
 }
