@@ -24,6 +24,7 @@ height: 700px;
 position: absolute;
 display: flex;
 border: 1px solid lightgray;
+
 }
 .header_left,
 .header_right{
@@ -32,7 +33,7 @@ border: 1px solid lightgray;
   z-index: 1;
   padding: 5px;
   border: 1px solid lightgray;
-  height: 60px;
+  height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -48,6 +49,9 @@ border: 1px solid lightgray;
 .name_contact{
   font-size: 14px;
   font-weight: 500;
+}
+.name_contact{
+  margin-left: 10px;
 }
 .icon_account{
   display: flex;
@@ -83,6 +87,26 @@ display: block;
 width: 100%;
 color: #6B7376;
 font-size: 11px;
+margin-top: 2px;
+}
+.notification{
+  background-color: #8EDAFC;
+  height: 80px;
+  margin-top: 70px;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
+}
+.bell_container{
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
 }
 .right_container{
   width: 65%;
@@ -92,6 +116,10 @@ font-size: 11px;
   height: 700px;
   display: flex;
   border: 1px solid lightgray;
+}
+.bell{
+  color:  #8EDAFC;
+  font-size: 18px;
 }
 .column_left{
   display: flex;
