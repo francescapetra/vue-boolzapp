@@ -44,9 +44,9 @@
 
               <ul>
                 <li v-for="(element,index) in contacts">
-                  <div class="address_1">
-                    <img class="img_address" src="'img/avatar' + contacts.avatar + '.jpg'" alt="photo">
-                    <p class="address_name">{{contacts.name}}pippo</p>
+                  <div class="address_2">
+                    <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
+                    <p class="address_name">{{element.name}}</p>
                   </div>
                 </li>
               </ul>
@@ -79,13 +79,17 @@
         </header>
         <main>
           <div class="row_messages">
-            <div class="send">
-              <p>Hai portato a spasso il cane?</p>
-              <p class="date_send">29/03/2021 20.01</p>
+            <div class="mess_container">
+              <div class="send">
+                <p>Hai portato a spasso il cane?</p>
+                <p class="date_send">29/03/2021 20.01</p>
+              </div>
             </div>
-            <div class="send">
-              <p>Ricordati di dargli da mangiare</p>
-              <p class="date_send">29/03/2021 20.01</p>
+            <div class="mess_container">
+              <div class="send">
+                <p>Ricordati di dargli da mangiare</p>
+                <p class="date_send">29/03/2021 20.01</p>
+              </div>
             </div>
             <div class="received">
               <p>Tutto fatto!</p>

@@ -188,6 +188,12 @@ main{
   display: inline-block;
   width: 100%;
 }
+.mess_container{
+  display: flex;
+  align-items: flex-end;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
 .received,
 .send{
   margin: 10px 40px;
