@@ -27,6 +27,7 @@ height: 700px;
 position: absolute;
 display: flex;
 border: 1px solid lightgray;
+overflow: auto;
 
 }
 .header_left,
@@ -169,6 +170,7 @@ i.search_for_input{
   height: 700px;
   display: flex;
   border: 1px solid lightgray;
+  overflow: auto;
 }
 
 .column_left{
@@ -197,6 +199,7 @@ footer{
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  z-index: 10;
 }
 .chat{
   width: 85%;
@@ -207,4 +210,7 @@ footer{
 }
 .smile_rec{
   color: #6B7376;
+}
+.prova{
+  height: 100%;
 }
