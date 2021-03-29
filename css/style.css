@@ -6,6 +6,7 @@
 body{
   background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
   height: 100vh;
+  font-family: 'Lato', sans-serif;
 }
 .container_all{
 background-color: lightgreen;
@@ -17,7 +18,7 @@ position: relative;
 display: flex;
 }
 .left_container{
-width: 30%;
+width: 35%;
 background-color: #fff;
 height: 700px;
 position: absolute;
@@ -29,11 +30,62 @@ border: 1px solid lightgray;
   background-color: #EAEAEA;
   position: absolute;
   z-index: 1;
-  padding: 2px;
+  padding: 5px;
   border: 1px solid lightgray;
+  height: 60px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.account,
+.account_contact{
+  display: flex;
+  width: 50%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.name_account,
+.name_contact{
+  font-size: 14px;
+  font-weight: 500;
+}
+.icon_account{
+  display: flex;
+  width: 50%;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icon_account a i{
+  margin-right: 15px;
+  color: #B1B1B1;
+}
+.icon_account a i:hover{
+color: #009688;
+}
+.avatar_io, .avatar_1{
+object-fit: cover;
+width: 17%;
+display: flex;
+border-radius: 50%;
+}
+.avatar_1{
+width: 10%;
+padding: 1px;
+}
+.nome_account,
+.nome_contatto{
+margin-left: 2px;
+align-content: center;
+font-size: 14px;
+}
+.last_access{
+display: block;
+width: 100%;
+color: #6B7376;
+font-size: 11px;
 }
 .right_container{
-  width: 70%;
+  width: 65%;
   position: absolute;
   right: 0;
   background-image: url("../img/mine.jpg");
