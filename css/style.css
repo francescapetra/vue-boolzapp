@@ -191,19 +191,30 @@ main{
 .received,
 .send{
   margin: 10px 40px;
-  width: 30%;
+  width: 35%;
+  font-size: 14px;
 }
 .received{
   background-color: #fff;
   padding: 15px;
   border-radius: 5px;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
 }
 .send{
   background-color: #D5F9BA;
   padding: 15px;
   border-radius: 5px;
   display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.date_send{
+  font-size: 8px;
+  white-space: nowrap;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-self: flex-end;
+  color: #B1B1B1;
 }
