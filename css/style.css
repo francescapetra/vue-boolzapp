@@ -7,3 +7,41 @@ body{
   background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
   height: 100vh;
 }
+.container_all{
+background-color: lightgreen;
+width: 80%;
+margin: auto;
+height: 100vh -40px;
+margin-top: 20px;
+position: relative;
+display: flex;
+}
+.left_container{
+width: 30%;
+background-color: #fff;
+height: 700px;
+position: absolute;
+display: flex;
+}
+.right_container{
+  width: 70%;
+  position: absolute;
+  right: 0;
+  background-image: url("../img/mine.jpg");
+  height: 700px;
+  display: flex;
+}
+.column_left{
+  display: flex;
+  background-color: pink;
+  width: 50%;
+  padding: 0 70px;
+  justify-content: flex-start;
+}
+.column_right{
+  display: flex;
+  background-color: lightblue;
+  width: 50%;
+  padding: 0 70px;
+  justify-content: flex-end;
+}
