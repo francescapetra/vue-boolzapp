@@ -7,38 +7,45 @@ body{
   background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
   height: 100vh;
   font-family: 'Lato', sans-serif;
+  padding: 20px 0;
 }
 .container_all{
-background-color: lightgreen;
-width: 80%;
-margin: auto;
-height: 100vh -40px;
-margin-top: 20px;
-position: relative;
-display: flex;
-}
-.container_left_container{
-  width: 100%;
+  background-color: pink;
+  max-width: 1480px;
+  height: calc(100vh - 40px);
+  margin:auto;
+  display: flex;
 }
 .left_container{
-width: 35%;
-background-color: #fff;
-height: 700px;
-position: absolute;
-display: flex;
-border: 1px solid lightgray;
+  background-color: lightblue;
+  width: 40%;
+  height: 100%;
+  background-color: #fff;
+  display: inline-block;
+  border: 1px solid lightgray;
+}
 
+.right_container{
+  background-color: lightgreen;
+  width: 60%;
+  height: 100%;
+  background-image: url("../img/mine.jpg");
+  display: inline-block;
+  border: 1px solid lightgray;
 }
 .header_left,
 .header_right{
   background-color: #EAEAEA;
-  position: absolute;
   padding: 5px;
   border: 1px solid lightgray;
   height: 70px;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+.header_right{
+  margin-bottom: 30px;
 }
 .account,
 .account_contact{
@@ -51,15 +58,6 @@ border: 1px solid lightgray;
 .name_contact{
   font-size: 14px;
   font-weight: 500;
-}
-.name_contact{
-  margin-left: 10px;
-}
-.icon_account{
-  display: flex;
-  width: 50%;
-  justify-content: flex-end;
-  align-items: center;
 }
 .icon_account a i{
   margin-right: 15px;
@@ -79,12 +77,6 @@ border-radius: 50%;
 width: 10%;
 padding: 1px;
 }
-.nome_account,
-.nome_contatto{
-margin-left: 2px;
-align-content: center;
-font-size: 14px;
-}
 .last_access{
 display: block;
 width: 100%;
@@ -93,27 +85,27 @@ font-size: 11px;
 margin-top: 2px;
 }
 .notification{
-  background-color: #8EDAFC;
-  height: 80px;
-  margin-top: 70px;
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
-  align-items: center;
-  padding-left: 15px;
+background-color: #8EDAFC;
+height: 80px;
+width: 100%;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+padding-left: 15px;
 }
 .bell_container{
-  height: 45px;
-  width: 45px;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
+height: 45px;
+width: 45px;
+background-color: #fff;
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+margin-right: 15px;
 }
 .bell{
-  color:  #8EDAFC;
-  font-size: 18px;
+color:  #8EDAFC;
+font-size: 18px;
 }
 .search_bar{
   background-color: #F3EEEA;
@@ -127,7 +119,7 @@ margin-top: 2px;
   outline: none;
   border: #B1B1B1;
   height: 30px;
-  padding-left: 45px;
+  padding: 0 55px;
 }
 i.search_for_input{
   position: absolute;
@@ -145,6 +137,7 @@ i.search_for_input{
   justify-content: flex-start;
   align-items: center;
   padding-left: 20px;
+  overflow: auto;
 }
 .address_2{
   border-bottom: 1px solid lightgray;
@@ -153,7 +146,7 @@ i.search_for_input{
  background-color: #EAEAEA;
 }
 .img_address{
-  width: 12%;
+  width: 10%;
   display: flex;
   border-radius: 50%;
 }
@@ -161,43 +154,19 @@ i.search_for_input{
   margin: 5px 0 0 10px;
   align-self: flex-start;
 }
-.right_container{
-  width: 65%;
-  position: absolute;
-  right: 0;
-  background-image: url("../img/mine.jpg");
-  height: 700px;
-  display: flex;
-  border: 1px solid lightgray;
+.container_overflow{
+  overflow-y: scroll;
+  height: 90%;
 }
 
-.column_left{
-  display: flex;
-  /* background-color: pink; */
-  width: 50%;
-  padding: 0 70px;
-  justify-content: flex-start;
-  margin-top: 80px;
-}
-.column_right{
-  display: flex;
-  /* background-color: lightblue; */
-  width: 50%;
-  padding: 0 70px;
-  justify-content: flex-end;
-  margin-top: 80px;
-}
 footer{
   background-color: #F3EEEA;
-  height: 70px;
-  position: absolute;
-  bottom: 0;
+  padding: 25px;
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-
+  align-self: baseline;
 }
 .chat{
   width: 85%;
@@ -209,13 +178,32 @@ footer{
 .smile_rec{
   color: #6B7376;
 }
-.message_sent{
-  background-color: #D5F9BA;
-}
-.overflow{
+main{
+  height: calc(100% - 185px);
+  overflow-y: auto;
+  width: 100%;
   display: flex;
-  overflow: auto;
 }
-.prova{
-  height: 100%;
+.row_messages{
+  display: inline-block;
+  width: 100%;
+}
+.received,
+.send{
+  margin: 10px 40px;
+  width: 30%;
+}
+.received{
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+}
+.send{
+  background-color: #D5F9BA;
+  padding: 15px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
