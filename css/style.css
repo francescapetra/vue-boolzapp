@@ -1,6 +1,9 @@
 *{
-  background-color: lightgreen;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.red{
-  color: red;
+body{
+  background: linear-gradient(to top, #dbdbd2 86%, #009688 86%);
+  height: 100vh;
 }
