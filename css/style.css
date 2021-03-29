@@ -22,6 +22,15 @@ background-color: #fff;
 height: 700px;
 position: absolute;
 display: flex;
+border: 1px solid lightgray;
+}
+.header_left,
+.header_right{
+  background-color: #EAEAEA;
+  position: absolute;
+  z-index: 1;
+  padding: 2px;
+  border: 1px solid lightgray;
 }
 .right_container{
   width: 70%;
@@ -30,18 +39,21 @@ display: flex;
   background-image: url("../img/mine.jpg");
   height: 700px;
   display: flex;
+  border: 1px solid lightgray;
 }
 .column_left{
   display: flex;
-  background-color: pink;
+  /* background-color: pink; */
   width: 50%;
   padding: 0 70px;
   justify-content: flex-start;
+  margin-top: 70px;
 }
 .column_right{
   display: flex;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   width: 50%;
   padding: 0 70px;
   justify-content: flex-end;
+  margin-top: 70px;
 }
