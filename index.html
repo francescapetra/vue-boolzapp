@@ -28,7 +28,6 @@
               <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
           </header>
-
           <div class="container_overflow">
             <div class="notification">
               <div class="bell_container">
@@ -36,14 +35,11 @@
               </div>
               <p class="name_contact">Ricevi notifiche di nuovi messaggi <a href="#" class="last_access"> Attiva notifiche desktop</a> </p>
             </div>
-
             <div class="search_bar">
               <label for="search_contact"><i class="search_for_input fas fa-search"></i>
-                  <input id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
+                <input id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
               </label>
-
             </div>
-
               <ul>
                 <li :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in contacts">
                   <div class="address">
@@ -56,20 +52,17 @@
       </div>
       <div class="right_container">
         <header class="header_right">
-
           <div class="account_contact">
             <img class="avatar_1" :src="'img/avatar' + contacts[contactIndex].avatar + '.jpg'">
             <p class="name_contact">{{contacts[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
           </div>
-
           <div class="icon_account">
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="#"><i class="fas fa-paperclip"></i></a>
             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </header>
-
-        <main >
+        <main>
           <div class="row_messages">
             <div class="mess_container" v-for="(messaggio,index) in contacts[contactIndex].messages">
               <div :class="(messaggio.status == 'sent') ? 'send' :'received' ">
@@ -79,7 +72,6 @@
             </div>
           </div>
         </main>
-
         <footer>
             <a href="#"><i class="smile_rec far fa-smile"></i></a>
             <input class="chat" v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keydown.13 ="addMessage(contactIndex)">
@@ -93,8 +85,6 @@
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
   <script>dayjs().format('DD/MM/YYYY HH:mm:ss')</script>
   <script src="script/script.js" charset="utf-8"></script>
-
-
 
 </body>
 </html>
