@@ -65,48 +65,48 @@ body{
 }
 .icon_account a i:hover,
 .smile_rec:hover{
-color: #009688;
+  color: #009688;
 }
 .avatar_io, .avatar_1{
-object-fit: cover;
-width: 17%;
-display: flex;
-border-radius: 50%;
+  object-fit: cover;
+  width: 17%;
+  display: flex;
+  border-radius: 50%;
 }
 .avatar_1{
-width: 10%;
-padding: 1px;
+  width: 10%;
+  padding: 1px;
 }
 .last_access{
-display: block;
-width: 100%;
-color: #6B7376;
-font-size: 11px;
-margin-top: 2px;
+  display: block;
+  width: 100%;
+  color: #6B7376;
+  font-size: 11px;
+  margin-top: 2px;
 }
 .notification{
-background-color: #8EDAFC;
-height: 80px;
-width: 100%;
-display: flex;
-justify-content: flex-start;
-align-items: center;
-padding-left: 15px;
+  background-color: #8EDAFC;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 15px;
 }
 .bell_container{
-height: 45px;
-width: 45px;
-background-color: #fff;
-display: flex;
-justify-content: center;
-align-items: center;
-border-radius: 50%;
-margin-right: 15px;
+  height: 45px;
+  width: 45px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 15px;
 }
 .bell{
-color:  #8EDAFC;
-font-size: 18px;
-cursor: pointer;
+  color:  #8EDAFC;
+  font-size: 18px;
+  cursor: pointer;
 }
 .search_bar{
   background-color: #F3EEEA;
