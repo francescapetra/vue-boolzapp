@@ -112,23 +112,30 @@ cursor: pointer;
   background-color: #F3EEEA;
   display: flex;
   padding: 10px 0;
-  position: relative;
+  width: 100%;
 }
-#search_contact{
-  width: 90%;;
+#search_contact,
+label{
   margin: auto;
   outline: none;
-  border: #B1B1B1;
   height: 30px;
-  padding: 0 55px;
+  width: 97%;
+  padding-left: 15px;
   border-radius: 5px;
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  justify-content: center;
+  border: none;
+}
+label{
+  border: 1px solid #DBDBD2;
+  padding-bottom: 30px;
 }
 i.search_for_input{
   cursor: pointer;
-  position: absolute;
-  z-index: 2;
-  left: 8%;
-  top:35%;
+  /* position: absolute; */
+  margin-top: 30px;
   font-size: 12px;
   color:#B1B1B1;
 }
