@@ -56,9 +56,9 @@
       <div class="right_container">
         <header class="header_right">
 
-          <div v-show="contactIndex == index " v-for="(element,index) in contacts" class="account_contact">
-            <img class="avatar_1" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
-            <p class="name_contact">{{element.name}}<span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
+          <div class="account_contact">
+            <img class="avatar_1" :src="'img/avatar' + contacts[contactIndex].avatar + '.jpg'">
+            <p class="name_contact">{{contacts[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
           </div>
 
           <div class="icon_account">
