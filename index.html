@@ -81,7 +81,7 @@
 
         <footer>
             <a href="#"><i class="smile_rec far fa-smile"></i></a>
-            <input class="chat" v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keydown.13 ="addMessage">
+            <input class="chat" v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keydown.13 ="addMessage(contactIndex)">
             <!-- <input  type="text" name="" value="" placeholder=""> -->
             <a href="#"><i class="smile_rec fas fa-microphone"></i></a>
           </footer>
@@ -89,7 +89,10 @@
     </div>
   </div>
 
+  <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+  <script>dayjs().format('DD/MM/YYYY HH:mm:ss')</script>
   <script src="script/script.js" charset="utf-8"></script>
+
 
 
 </body>

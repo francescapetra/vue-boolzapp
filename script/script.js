@@ -88,12 +88,17 @@ var app = new Vue(
           },
       ]
     },
-    methods:{
-      addMessage: function(){
-        // if (this.newMessage!== "") {
-          // this.contacts.messages.message.push(this.newMessage);
-          this.newMessage = "";
+    methods: {
+
+      addMessage: function(index) {
+        if (this.newMessage != "") {
+          this.contacts[index].messages.push({
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            message: this.newMessage,
+            status: 'sent'
+          });
+          this.newMessage="";
         }
-    },
-  }
-);
+      }
+    }
+});
