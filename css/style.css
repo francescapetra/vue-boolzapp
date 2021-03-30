@@ -188,10 +188,8 @@ main{
 }
 .mess_container{
   display: flex;
-  align-items: flex-end;
-  align-self: flex-end;
-  justify-content: flex-end;
 }
+
 .received,
 .send{
   margin: 10px 40px;
@@ -205,6 +203,7 @@ main{
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  margin-right: auto;
 
 }
 .send{
@@ -214,6 +213,7 @@ main{
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  margin-left: auto;
 }
 .date_send{
   font-size: 8px;
