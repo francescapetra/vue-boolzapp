@@ -78,12 +78,13 @@
             <a href="#"><i class="fas fa-ellipsis-v"></i></a>
           </div>
         </header>
-        <main>
+
+        <main >
           <div class="row_messages">
-            <div class="mess_container">
-              <div class="send">
-                <p>Hai portato a spasso il cane?</p>
-                <p class="date_send">29/03/2021 20.01</p>
+            <div class="mess_container" v-for="(messaggio,index) in contacts[0].messages">
+              <div :class="(messaggio.status == 'sent') ? 'send' :'received' ">
+                <p>{{messaggio.message}}</p>
+                <p class="date_send">{{messaggio.date}}</p>
               </div>
             </div>
             <div class="mess_container">
@@ -97,8 +98,8 @@
               <p class="date_send">29/03/2021 20.01</p>
             </div>
           </div>
-
         </main>
+
         <footer>
             <a href="#"><i class="smile_rec far fa-smile"></i></a>
             <input class="chat" type="text" name="" value="" placeholder="Scrivi un messaggio">
