@@ -129,9 +129,7 @@ i.search_for_input{
   font-size: 12px;
   color:#B1B1B1;
 }
-.address_1,
-.address_2,
-.address_3{
+.address{
   height: 70px;
   display: flex;
   justify-content: flex-start;
@@ -139,10 +137,10 @@ i.search_for_input{
   padding-left: 20px;
   overflow: auto;
 }
-.address_2{
+.address_not_active{
   border-bottom: 1px solid lightgray;
 }
-.address_1{
+.address_active{
  background-color: #EAEAEA;
 }
 .img_address{

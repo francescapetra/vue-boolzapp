@@ -38,13 +38,14 @@
             </div>
 
             <div class="search_bar">
+              <!-- da cambiare -->
               <a href="#"><i class="search_for_input fas fa-search"></i></a>
               <input class="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat">
             </div>
 
               <ul>
                 <li v-for="(element,index) in contacts">
-                  <div class="address_2">
+                  <div class="address address_not_active">
                     <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
                     <p class="address_name">{{element.name}}</p>
                   </div>
