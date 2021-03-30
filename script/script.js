@@ -5,6 +5,7 @@ var app = new Vue(
     el:"#root",
     data:{
       contactIndex: 0,
+      newMessage: "",
       contacts: [
           {
               name: 'Michele',
@@ -88,8 +89,11 @@ var app = new Vue(
       ]
     },
     methods:{
-
-    }
+      addMessage: function(){
+        // if (this.newMessage!== "") {
+          // this.contacts.messages.message.push(this.newMessage);
+          this.newMessage = "";
+        }
+    },
   }
-
 );

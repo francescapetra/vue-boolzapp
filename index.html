@@ -51,19 +51,6 @@
                   </div>
                 </li>
               </ul>
-
-              <!-- <div class="address_2">
-                <img class="img_address" src="img/avatar_2.jpg" alt="">
-                <p class="address_name">Fabio</p>
-              </div>
-              <div class="address_2">
-                <img class="img_address" src="img/avatar_3.jpg" alt="">
-                <p class="address_name">Samuele</p>
-              </div>
-              <div class="address_3">
-                <img class="img_address" src="img/avatar_6.jpg" alt="">
-                <p class="address_name">Luisa</p>
-              </div> -->
           </div>
       </div>
       <div class="right_container">
@@ -94,7 +81,8 @@
 
         <footer>
             <a href="#"><i class="smile_rec far fa-smile"></i></a>
-            <input class="chat" type="text" name="" value="" placeholder="Scrivi un messaggio">
+            <input class="chat" v-model="newMessage" type="text" placeholder="Scrivi un messaggio" @keydown.13 ="addMessage">
+            <!-- <input  type="text" name="" value="" placeholder=""> -->
             <a href="#"><i class="smile_rec fas fa-microphone"></i></a>
           </footer>
       </div>
