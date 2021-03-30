@@ -6,6 +6,7 @@ var app = new Vue(
     data:{
       contactIndex: 0,
       newMessage: "",
+      logHour: dayjs().format('HH:mm:ss'),
       contacts: [
           {
               name: 'Michele',

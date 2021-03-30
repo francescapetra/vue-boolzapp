@@ -54,7 +54,7 @@
         <header class="header_right">
           <div class="account_contact">
             <img class="avatar_1" :src="'img/avatar' + contacts[contactIndex].avatar + '.jpg'">
-            <p class="name_contact">{{contacts[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
+            <p class="name_contact">{{contacts[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle {{logHour}}</span> </p>
           </div>
           <div class="icon_account">
             <a href="#"><i class="fas fa-search"></i></a>
@@ -80,6 +80,7 @@
           </footer>
       </div>
     </div>
+
   </div>
 
   <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
