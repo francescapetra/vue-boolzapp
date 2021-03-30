@@ -4,6 +4,7 @@ var app = new Vue(
   {
     el:"#root",
     data:{
+      contactIndex: 0,
       contacts: [
           {
               name: 'Michele',

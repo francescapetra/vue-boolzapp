@@ -44,8 +44,8 @@
             </div>
 
               <ul>
-                <li v-for="(element,index) in contacts">
-                  <div class="address address_not_active">
+                <li :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in contacts">
+                  <div class="address">
                     <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
                     <p class="address_name">{{element.name}}</p>
                   </div>
@@ -68,10 +68,12 @@
       </div>
       <div class="right_container">
         <header class="header_right">
-          <div class="account_contact">
-            <img class="avatar_1" src="img/avatar_1.jpg" alt="">
-            <p class="name_contact">Michele <span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
+
+          <div v-show="contactIndex == index " v-for="(element,index) in contacts" class="account_contact">
+            <img class="avatar_1" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
+            <p class="name_contact">{{element.name}}<span class="last_access"> Ultimo accesso oggi alle 13.39</span> </p>
           </div>
+
           <div class="icon_account">
             <a href="#"><i class="fas fa-search"></i></a>
             <a href="#"><i class="fas fa-paperclip"></i></a>
@@ -81,7 +83,7 @@
 
         <main >
           <div class="row_messages">
-            <div class="mess_container" v-for="(messaggio,index) in contacts[0].messages">
+            <div class="mess_container" v-for="(messaggio,index) in contacts[contactIndex].messages">
               <div :class="(messaggio.status == 'sent') ? 'send' :'received' ">
                 <p>{{messaggio.message}}</p>
                 <p class="date_send">{{messaggio.date}}</p>
