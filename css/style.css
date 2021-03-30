@@ -45,7 +45,7 @@ body{
   align-items: center;
 }
 .header_right{
-  margin-bottom: 30px;
+
 }
 .account,
 .account_contact{
@@ -165,7 +165,7 @@ i.search_for_input{
 }
 .container_overflow{
   overflow-y: scroll;
-  height: 90%;
+  height: calc(100% - 70px);
 }
 
 footer{
@@ -188,10 +188,11 @@ footer{
   color: #6B7376;
 }
 main{
-  height: calc(100% - 185px);
-  overflow-y: auto;
+  height: calc(100% - 155px);
+  overflow-y: scroll;
   width: 100%;
   display: flex;
+  padding-top: 30px;
 }
 .row_messages{
   display: inline-block;
