@@ -97,6 +97,13 @@ var app = new Vue(
             message: this.newMessage,
             status: 'sent'
           });
+          setTimeout(() => {
+          this.contacts[this.contactIndex].messages.push({
+            date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
+            message: 'ok',
+            status: 'received'
+          });
+        }, 1000);
           this.newMessage="";
         }
       }
