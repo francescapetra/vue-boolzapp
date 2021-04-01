@@ -7,6 +7,9 @@ var app = new Vue(
       contactIndex: 0,
       newMessage: "",
       logHour: dayjs().format('HH:mm:ss'),
+      nameFiltered : [],
+      searchName: "",
+      miaClasse : "show",
       contacts: [
           {
               name: 'Michele',
@@ -107,6 +110,15 @@ var app = new Vue(
         }, 1000);
           this.newMessage="";
         }
+      },
+      cambiaClasse: function(element){
+        if (element.name == searchName) {
+          this.miaClasse = "show";
+        }else {
+          this.miaClasse = "hide";
+        }
+
       }
     }
+
 });

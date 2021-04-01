@@ -238,3 +238,8 @@ ul li{
   list-style: none;
   cursor: pointer;
 }
+.show{
+background-color: lightgreen;
+}
+.hide{
+}
