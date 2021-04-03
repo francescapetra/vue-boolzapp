@@ -36,13 +36,13 @@
               <p class="name_contact">Ricevi notifiche di nuovi messaggi <a href="#" class="last_access"> Attiva notifiche desktop</a> </p>
             </div>
             <div class="search_bar">
-              <label for="search_contact"><i class="search_for_input fas fa-search"></i>
-                <input id="search_contact" type="text" name="" value="" placeholder="cerca un contatto " v-model="searchName" @keydown.13 ="cambiaClasse" >
+              <label for="searchName"><i class="search_for_input fas fa-search"></i>
+                <input id="search_contact" type="text" name="" value="" placeholder="cerca un contatto " v-model="searchName" @keydown.13 ="ricerca" >
               </label>
             </div>
               <ul>
-                  <li  :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in contacts">
-                  <div  :class="element.name == searchName ? 'show' : 'hide'" class="address">
+                  <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in contacts">
+                  <div  class="address">
                     <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
                     <p class="address_name">{{element.name}}</p>
                   </div>

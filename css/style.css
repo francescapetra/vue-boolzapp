@@ -239,7 +239,5 @@ ul li{
   cursor: pointer;
 }
 .show{
-background-color: lightgreen;
-}
-.hide{
+  background-color: lightgreen;
 }

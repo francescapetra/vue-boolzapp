@@ -1,5 +1,6 @@
 // Milestone 1
 // ●Replica della grafica con la possibilità di avere messaggi scritti dall’utente (verdi) edall’interlocutore (bianco) assegnando due classiCSS diverse●Visualizzazione dinamica della lista contatti:tramitela direttiva v-for, visualizzarenome e immagine di ogni contatto
+
 var app = new Vue(
   {
     el:"#root",
@@ -9,7 +10,7 @@ var app = new Vue(
       logHour: dayjs().format('HH:mm:ss'),
       nameFiltered : [],
       searchName: "",
-      miaClasse : "show",
+      show: "",
       contacts: [
           {
               name: 'Michele',
@@ -92,6 +93,7 @@ var app = new Vue(
           },
       ]
     },
+
     methods: {
 
       addMessage: function(index) {
@@ -111,14 +113,16 @@ var app = new Vue(
           this.newMessage="";
         }
       },
-      cambiaClasse: function(element){
-        if (element.name == searchName) {
-          this.miaClasse = "show";
+
+    ricerca: function(){
+      this.contacts.forEach((item,index)=>{
+        if (item.name.toLowerCase().trim() == this.searchName.toLowerCase().trim()) {
+          item.visible = true;
         }else {
-          this.miaClasse = "hide";
+          item.visible = false;
         }
-
       }
+    )
+  },
     }
-
 });
