@@ -93,7 +93,6 @@ var app = new Vue(
           },
       ]
     },
-
     methods: {
 
       addMessage: function(index) {
