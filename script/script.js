@@ -10,7 +10,8 @@ var app = new Vue(
       logHour: dayjs().format('HH:mm:ss'),
       nameFiltered : [],
       searchName: "",
-      show: "",
+      show: "Nessun contatto corrispondente",
+      origins: this.contacts,
       contacts: [
           {
               name: 'Michele',
@@ -91,6 +92,11 @@ var app = new Vue(
                   }
               ],
           },
+          // {
+          //     name: 'Nessun contatto corrispondente',
+          //     avatar: '_10',
+          //     visible: false,
+          // },
       ]
     },
     methods: {
@@ -113,15 +119,45 @@ var app = new Vue(
         }
       },
 
-    ricerca: function(){
-      this.contacts.forEach((item,index)=>{
-        if (item.name.toLowerCase().trim() == this.searchName.toLowerCase().trim()) {
-          item.visible = true;
+      filteredList() {
+        if (this.searchName == "") {
+          console.log(this.searchName);
+          console.log("vuoto");
         }else {
-          item.visible = false;
+          console.log(this.searchName);
+          console.log("trovato");
+          this.contacts = this.contacts.filter(element=> {
+          return element.name.toLowerCase().includes
+          (this.searchName.toLowerCase())
+            }
+          );
         }
-      }
-    )
-  },
+
     }
+
+
+    // ricerca: function(){
+    //   // setto una var per usarla sul contatto non esistente
+    //   var exist = false;
+    //   // faccio ciclo e v erifico se il nome del contatto è uguale all'inserimento della search_for_input
+    //   this.contacts.forEach((item,index)=>{
+    //     if (item.name.toLowerCase().trim() == this.searchName.toLowerCase().trim()) {
+    //       item.visible = true;
+    //       exist = true;
+    //     }
+    //     else if (item.name.toLowerCase().trim() != this.searchName.toLowerCase().trim() && this.searchName != "")  {
+    //       item.visible = false;
+    //     }else if (this.searchName == "") {
+    //       item.visible = true;
+    //     }
+    //   }
+    // )
+    //   if(exist==false && this.searchName != ""){
+    //     this.contacts[4].visible = true;
+    //   }
+    //   else {
+    //    this.contacts[4].visible = false;
+    //   }
+    // },
+  }
 });
