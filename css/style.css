@@ -165,7 +165,7 @@ i.search_for_input{
 }
 .container_overflow{
   overflow-y: scroll;
-  height: calc(100% - 70px);
+  height: calc(100% - 202px);
 }
 
 footer{

@@ -10,8 +10,6 @@ var app = new Vue(
       logHour: dayjs().format('HH:mm:ss'),
       nameFiltered : [],
       searchName: "",
-      show: "Nessun contatto corrispondente",
-      origins: this.contacts,
       contacts: [
           {
               name: 'Michele',

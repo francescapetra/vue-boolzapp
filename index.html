@@ -28,7 +28,6 @@
               <a href="#"><i class="fas fa-ellipsis-v"></i></a>
             </div>
           </header>
-          <div class="container_overflow">
             <div class="notification">
               <div class="bell_container">
                 <i class="bell fas fa-bell-slash"></i>
@@ -37,11 +36,12 @@
             </div>
             <div class="search_bar">
               <label for="searchName"><i class="search_for_input fas fa-search"></i>
-                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName" @keydown.13 ="notFound">
+                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName">
               </label>
             </div>
+            <div class="container_overflow">
               <ul>
-                <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in searchContact">
+                <li  :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in searchContact">
                 <div  class="address">
                   <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
                   <p class="address_name">{{element.name}}</p>
