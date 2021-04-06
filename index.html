@@ -37,12 +37,12 @@
             </div>
             <div class="search_bar">
               <label for="searchName"><i class="search_for_input fas fa-search"></i>
-                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName" v-on:input ="filteredList()">
+                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName">
               </label>
             </div>
               <ul>
-                  <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in contacts">
-                  <div  class="address" >
+                  <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in searchContact">
+                  <div  class="address">
                     <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
                     <p class="address_name">{{element.name}}</p>
                   </div>

@@ -118,23 +118,15 @@ var app = new Vue(
           this.newMessage="";
         }
       },
+    },
+    computed: {
+      searchContact() {
+          return this.contacts.filter(element=> {
+          return element.name.toLowerCase().includes(this.searchName.toLowerCase());
 
-      filteredList() {
-        if (this.searchName == "") {
-          console.log(this.searchName);
-          console.log("vuoto");
-        }else {
-          console.log(this.searchName);
-          console.log("trovato");
-          this.contacts = this.contacts.filter(element=> {
-          return element.name.toLowerCase().includes
-          (this.searchName.toLowerCase())
-            }
-          );
-        }
-
+        })
     }
-
+  },
 
     // ricerca: function(){
     //   // setto una var per usarla sul contatto non esistente
@@ -159,5 +151,5 @@ var app = new Vue(
     //    this.contacts[4].visible = false;
     //   }
     // },
-  }
+
 });
