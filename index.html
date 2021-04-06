@@ -41,11 +41,11 @@
               </label>
             </div>
               <ul>
-                  <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in searchContact">
-                  <div  class="address">
-                    <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
-                    <p class="address_name">{{element.name}}</p>
-                  </div>
+                <li v-show="element.visible" :class="contactIndex == index ? 'address_active' : 'address_not_active'" @click='contactIndex = index' v-for="(element,index) in searchContact">
+                <div  class="address">
+                  <img class="img_address" :src="'img/avatar' + element.avatar + '.jpg'" alt="photo">
+                  <p class="address_name">{{element.name}}</p>
+                </div>
                 </li>
               </ul>
               <p class="no_result" v-if="searchContact.length == 0">Nessun contatto corrispondente alla ricerca effettuata</p>
