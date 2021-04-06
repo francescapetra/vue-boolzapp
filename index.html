@@ -37,7 +37,7 @@
             </div>
             <div class="search_bar">
               <label for="searchName"><i class="search_for_input fas fa-search"></i>
-                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName">
+                <input  id="search_contact" type="text" name="" value="" placeholder="cerca o inizia una nuova chat" v-model="searchName" @keydown.13 ="notFound">
               </label>
             </div>
               <ul>
@@ -48,11 +48,12 @@
                   </div>
                 </li>
               </ul>
+              <p class="no_result" v-if="searchContact.length == 0">Nessun contatto corrispondente alla ricerca effettuata</p>
           </div>
       </div>
       <div class="right_container">
         <header class="header_right">
-          <div class="account_contact">
+          <div class="account_contact" v-if="searchContact.length > 0">
             <img class="avatar_1" :src="'img/avatar' + searchContact[contactIndex].avatar + '.jpg'">
             <p class="name_contact">{{searchContact[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle {{logHour}}</span> </p>
           </div>
@@ -63,7 +64,7 @@
           </div>
         </header>
         <main>
-          <div class="row_messages">
+          <div class="row_messages" v-if="searchContact.length > 0" >
             <div class="mess_container" v-for="(messaggio,index) in searchContact[contactIndex].messages">
               <div :class="(messaggio.status == 'sent') ? 'send' :'received' ">
                 <p>{{messaggio.message}}</p>

@@ -241,3 +241,8 @@ ul li{
 .show{
   background-color: lightgreen;
 }
+.no_result{
+  padding: 30px 70px;
+  background-color: lightgray;
+  margin: auto;
+}

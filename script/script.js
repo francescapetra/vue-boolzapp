@@ -92,11 +92,6 @@ var app = new Vue(
                   }
               ],
           },
-          // {
-          //     name: 'Nessun contatto corrispondente',
-          //     avatar: '_10',
-          //     visible: false,
-          // },
       ]
     },
     methods: {
@@ -118,6 +113,7 @@ var app = new Vue(
           this.newMessage="";
         }
       },
+
     },
     computed: {
       searchContact() {
@@ -129,27 +125,27 @@ var app = new Vue(
   },
 
     // ricerca: function(){
-    //   // setto una var per usarla sul contatto non esistente
-    //   var exist = false;
-    //   // faccio ciclo e v erifico se il nome del contatto è uguale all'inserimento della search_for_input
-    //   this.contacts.forEach((item,index)=>{
-    //     if (item.name.toLowerCase().trim() == this.searchName.toLowerCase().trim()) {
-    //       item.visible = true;
-    //       exist = true;
-    //     }
+    //  // setto una var per usarla sul contatto non esistente
+    // var exist = false;
+    // // faccio ciclo e v erifico se il nome del contatto è uguale all'inserimento della search_for_input
+    //  this.contacts.forEach((item,index)=>{
+    //      if (item.name.toLowerCase().trim() == this.searchName.toLowerCase().trim()) {
+    //      item.visible = true;
+    //        exist = true;
+    //      }
     //     else if (item.name.toLowerCase().trim() != this.searchName.toLowerCase().trim() && this.searchName != "")  {
     //       item.visible = false;
-    //     }else if (this.searchName == "") {
+    //      }else if (this.searchName == "") {
     //       item.visible = true;
     //     }
-    //   }
-    // )
-    //   if(exist==false && this.searchName != ""){
-    //     this.contacts[4].visible = true;
-    //   }
-    //   else {
+    //    }
+    //  )
+    //    if(exist==false && this.searchName != ""){
+    //      this.contacts[4].visible = true;
+    //    }
+    //    else {
     //    this.contacts[4].visible = false;
-    //   }
+    //    }
     // },
 
 });
