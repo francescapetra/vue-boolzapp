@@ -103,13 +103,13 @@ var app = new Vue(
 
       addMessage: function(index) {
         if (this.newMessage != "") {
-          this.contacts[index].messages.push({
+          this.searchContact[index].messages.push({
             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
             message: this.newMessage,
             status: 'sent'
           });
           setTimeout(() => {
-          this.contacts[this.contactIndex].messages.push({
+          this.searchContact[index].messages.push({
             date: dayjs().format('DD/MM/YYYY HH:mm:ss'),
             message: 'ok',
             status: 'received'

@@ -53,8 +53,8 @@
       <div class="right_container">
         <header class="header_right">
           <div class="account_contact">
-            <img class="avatar_1" :src="'img/avatar' + contacts[contactIndex].avatar + '.jpg'">
-            <p class="name_contact">{{contacts[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle {{logHour}}</span> </p>
+            <img class="avatar_1" :src="'img/avatar' + searchContact[contactIndex].avatar + '.jpg'">
+            <p class="name_contact">{{searchContact[contactIndex].name}}<span class="last_access"> Ultimo accesso oggi alle {{logHour}}</span> </p>
           </div>
           <div class="icon_account">
             <a href="#"><i class="fas fa-search"></i></a>
@@ -64,7 +64,7 @@
         </header>
         <main>
           <div class="row_messages">
-            <div class="mess_container" v-for="(messaggio,index) in contacts[contactIndex].messages">
+            <div class="mess_container" v-for="(messaggio,index) in searchContact[contactIndex].messages">
               <div :class="(messaggio.status == 'sent') ? 'send' :'received' ">
                 <p>{{messaggio.message}}</p>
                 <p class="date_send">{{messaggio.date}}</p>
